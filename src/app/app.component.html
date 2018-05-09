@@ -1,0 +1,34 @@
+<!-- <h1 *ngIf="pageinfo">{{pageinfo.title}}</h1>        
+
+<div class="search-results"
+		    infiniteScroll
+		    [infiniteScrollDistance]="2"
+        [infiniteScrollThrottle]="20"
+        (scrolled)="onScroll()">
+        
+          <p *ngFor="let i of data">
+            {{ i.name }}
+          </p>
+        </div> -->
+ 
+    
+
+<!-- 
+    <div class="search-results"
+		    infiniteScroll
+		    [infiniteScrollDistance]="2"
+		    [infiniteScrollThrottle]="20"
+        (scrolled)="onScroll()">
+        <p *ngFor="let i of array">
+          {{i}}
+        </p>
+        
+
+    </div> -->
+
+
+    <div (window:scroll)="onScroll($event)">
+      <div *ngFor="let item of stones">
+          <div style="width:100px; height:60px; background-color:green;margin:20px"></div>
+      </div>
+  </div>
